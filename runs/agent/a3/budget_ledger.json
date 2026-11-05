@@ -1,0 +1,26 @@
+{
+ "budget": 10,
+ "used": 4,
+ "passes": [
+  {
+   "k": 1,
+   "kind": "generate",
+   "time": "09:42:27"
+  },
+  {
+   "k": 2,
+   "kind": "teacher_forced",
+   "time": "09:44:33"
+  },
+  {
+   "k": 3,
+   "kind": "teacher_forced",
+   "time": "10:16:43"
+  },
+  {
+   "k": 4,
+   "kind": "teacher_forced",
+   "time": "10:18:17"
+  }
+ ]
+}

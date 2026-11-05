@@ -1,0 +1,76 @@
+{
+ "init": {
+  "model": "claude-opus-5-5",
+  "tools": [
+   "Task",
+   "Bash",
+   "CronCreate",
+   "CronDelete",
+   "CronList",
+   "DesignSync",
+   "Edit",
+   "EnterWorktree",
+   "ExitWorktree",
+   "ListAgents",
+   "Monitor",
+   "NotebookEdit",
+   "PushNotification",
+   "Read",
+   "RemoteTrigger",
+   "ReportFindings",
+   "ScheduleWakeup",
+   "SendMessage",
+   "Skill",
+   "TaskStop",
+   "ToolSearch",
+   "Write"
+  ],
+  "mcp_servers": []
+ },
+ "result": {
+  "duration_ms": 2458468,
+  "num_turns": 17,
+  "total_cost_usd": 0.4310886,
+  "is_error": false,
+  "subtype": "success"
+ },
+ "tool_calls": 16,
+ "tools_used": {
+  "Bash": 16
+ },
+ "flags": {
+  "network": [],
+  "paper_artifacts": [],
+  "training": [],
+  "model_loading": [],
+  "paths_outside_allowed": [
+   "/tmp/claude-1000/-home-box-wsp-agent-attempts-a3-work/100190f5-817c-4da0-9939-39bfa2e0b0d5/tasks/b0kmms148.output"
+  ]
+ },
+ "budget": {
+  "budget": 10,
+  "used": 4,
+  "passes": [
+   {
+    "k": 1,
+    "kind": "generate",
+    "time": "09:42:27"
+   },
+   {
+    "k": 2,
+    "kind": "teacher_forced",
+    "time": "09:44:33"
+   },
+   {
+    "k": 3,
+    "kind": "teacher_forced",
+    "time": "10:16:43"
+   },
+   {
+    "k": 4,
+    "kind": "teacher_forced",
+    "time": "10:18:17"
+   }
+  ]
+ }
+}
