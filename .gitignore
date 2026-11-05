@@ -1,0 +1,14 @@
+# weights, venvs, caches
+*.safetensors
+*.gguf
+*.npy
+*.npz
+*.bin
+*.pt
+models/
+venv/
+.venv/
+__pycache__/
+*.pyc
+.cache/
+*.server.log
