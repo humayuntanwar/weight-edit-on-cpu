@@ -1,0 +1,402 @@
+{
+ "tensors": [
+  {
+   "name": "model.language_model.layers.15.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2986118,
+   "numel": 3670016,
+   "rel_fro_change": 0.030376963317394257,
+   "edited_bf16_sha256": "61f6f5babca18a93c3fbcc21f12b8b40ea4ed016ea7b96aed7d945b75612fdcf",
+   "changed_rows": 1024,
+   "changed_columns": 3584,
+   "delta_top_singular_values": [
+    0.49912,
+    0.00324,
+    0.00234,
+    0.00228,
+    0.00225
+   ],
+   "delta_energy_in_top1": 0.9973301291465759,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.15.self_attn.o_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "changed_entries": 1685317,
+   "numel": 2097152,
+   "rel_fro_change": 0.02976519986987114,
+   "edited_bf16_sha256": "b1b60e97e4b52ef277d1e6706fbee39dfbebb74a829ee47fd6e7a5daffb9afd1",
+   "changed_rows": 1024,
+   "changed_columns": 2048,
+   "delta_top_singular_values": [
+    0.59569,
+    0.00422,
+    0.00302,
+    0.00289,
+    0.00278
+   ],
+   "delta_energy_in_top1": 0.9972366094589233,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.16.linear_attn.out_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "changed_entries": 1695162,
+   "numel": 2097152,
+   "rel_fro_change": 0.030623294413089752,
+   "edited_bf16_sha256": "72581f9bef599a77accf6a94cd628d3fed8d5fe0da0dc28b24a669b5fd208016",
+   "changed_rows": 1024,
+   "changed_columns": 2048,
+   "delta_top_singular_values": [
+    0.49084,
+    0.00313,
+    0.00234,
+    0.00229,
+    0.00223
+   ],
+   "delta_energy_in_top1": 0.9973776936531067,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.16.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2950971,
+   "numel": 3670016,
+   "rel_fro_change": 0.029557108879089355,
+   "edited_bf16_sha256": "99155c26fddf75d1f69c7f2b11a8c1f9e2d77c22d5df561a4ac1b7e88748c2a4",
+   "changed_rows": 1024,
+   "changed_columns": 3584,
+   "delta_top_singular_values": [
+    0.48347,
+    0.00336,
+    0.00236,
+    0.00228,
+    0.00225
+   ],
+   "delta_energy_in_top1": 0.9971725344657898,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.17.linear_attn.out_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "changed_entries": 1698746,
+   "numel": 2097152,
+   "rel_fro_change": 0.03312406316399574,
+   "edited_bf16_sha256": "9bbe16d4303ce1d589784753e20ceaded801af963805577f86ed5df69b5d16b9",
+   "changed_rows": 1024,
+   "changed_columns": 2048,
+   "delta_top_singular_values": [
+    0.51309,
+    0.00311,
+    0.00241,
+    0.00229,
+    0.00226
+   ],
+   "delta_energy_in_top1": 0.9977566599845886,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.17.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2931553,
+   "numel": 3670016,
+   "rel_fro_change": 0.02828441932797432,
+   "edited_bf16_sha256": "00b610415fce1de085947d60b47eee6182f96ec1fb6de0fe87bd620b895d8bbc",
+   "changed_rows": 1024,
+   "changed_columns": 3584,
+   "delta_top_singular_values": [
+    0.46308,
+    0.00336,
+    0.00242,
+    0.00232,
+    0.00223
+   ],
+   "delta_energy_in_top1": 0.996935248374939,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.18.linear_attn.out_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "changed_entries": 1700600,
+   "numel": 2097152,
+   "rel_fro_change": 0.031134197488427162,
+   "edited_bf16_sha256": "e336d0a09e8926712c4397aa84e444c4a11c7111bc7a6c362bd41eb38a65da78",
+   "changed_rows": 1024,
+   "changed_columns": 2048,
+   "delta_top_singular_values": [
+    0.45539,
+    0.00291,
+    0.00236,
+    0.0021,
+    0.00206
+   ],
+   "delta_energy_in_top1": 0.9974533915519714,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.18.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2940096,
+   "numel": 3670016,
+   "rel_fro_change": 0.029080752283334732,
+   "edited_bf16_sha256": "d7ea3ca3d57ef36966949e74e1ba53eb9f68b6dba061c4be2ea7b3aec4a0c785",
+   "changed_rows": 1024,
+   "changed_columns": 3584,
+   "delta_top_singular_values": [
+    0.47747,
+    0.00332,
+    0.00238,
+    0.0023,
+    0.00229
+   ],
+   "delta_energy_in_top1": 0.9970937967300415,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.19.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2914538,
+   "numel": 3670016,
+   "rel_fro_change": 0.027701260522007942,
+   "edited_bf16_sha256": "fd68fb3da6ec873ff59e0c5843d41f4e4a0a4d20122aa3c3efdaad0044f936e1",
+   "changed_rows": 1024,
+   "changed_columns": 3583,
+   "delta_top_singular_values": [
+    0.47752,
+    0.00354,
+    0.0025,
+    0.00242,
+    0.00237
+   ],
+   "delta_energy_in_top1": 0.9967880249023438,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.19.self_attn.o_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "changed_entries": 1637946,
+   "numel": 2097152,
+   "rel_fro_change": 0.025250498205423355,
+   "edited_bf16_sha256": "6e4f767fdca802ed60026b2c8eec3ae829de803ec93bc2f762acb5544858025f",
+   "changed_rows": 1024,
+   "changed_columns": 2048,
+   "delta_top_singular_values": [
+    0.61032,
+    0.00527,
+    0.00371,
+    0.00349,
+    0.00343
+   ],
+   "delta_energy_in_top1": 0.9962341785430908,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.20.linear_attn.out_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "changed_entries": 1678727,
+   "numel": 2097152,
+   "rel_fro_change": 0.030402980744838715,
+   "edited_bf16_sha256": "d756419942058ba18db00dff41893dd5a432c1676897836c19cf5f198d509a35",
+   "changed_rows": 1024,
+   "changed_columns": 2048,
+   "delta_top_singular_values": [
+    0.46305,
+    0.00305,
+    0.00237,
+    0.00218,
+    0.00211
+   ],
+   "delta_energy_in_top1": 0.9973170757293701,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.20.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2913419,
+   "numel": 3670016,
+   "rel_fro_change": 0.02700803428888321,
+   "edited_bf16_sha256": "86e627dc3d55b9fcd463b210831dfcb1805f18df407dd17290c632d0fa973c34",
+   "changed_rows": 1024,
+   "changed_columns": 3584,
+   "delta_top_singular_values": [
+    0.4723,
+    0.00366,
+    0.00254,
+    0.0025,
+    0.0024
+   ],
+   "delta_energy_in_top1": 0.9966221451759338,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.21.linear_attn.out_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "changed_entries": 1701961,
+   "numel": 2097152,
+   "rel_fro_change": 0.02997390553355217,
+   "edited_bf16_sha256": "a494ded007e18de1d55f1ae562f511feaa7cbafc3038bc5ff3effd74f0fefa65",
+   "changed_rows": 1024,
+   "changed_columns": 2048,
+   "delta_top_singular_values": [
+    0.50241,
+    0.00347,
+    0.00245,
+    0.00238,
+    0.00236
+   ],
+   "delta_energy_in_top1": 0.9972091913223267,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.21.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2943072,
+   "numel": 3670016,
+   "rel_fro_change": 0.028053106740117073,
+   "edited_bf16_sha256": "f639139394f63fabc1ce540697c7a557e2c0c3423d565509cd0f083ecd67a980",
+   "changed_rows": 1024,
+   "changed_columns": 3583,
+   "delta_top_singular_values": [
+    0.49615,
+    0.00354,
+    0.00258,
+    0.0025,
+    0.00242
+   ],
+   "delta_energy_in_top1": 0.9968522787094116,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.22.linear_attn.out_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "changed_entries": 1690850,
+   "numel": 2097152,
+   "rel_fro_change": 0.031718116253614426,
+   "edited_bf16_sha256": "6ee57a906d9c713c1489d9f4dc09e831126afdb32cbe642cf6c57955a8f8a6ab",
+   "changed_rows": 1024,
+   "changed_columns": 2047,
+   "delta_top_singular_values": [
+    0.56094,
+    0.00353,
+    0.00251,
+    0.00246,
+    0.00243
+   ],
+   "delta_energy_in_top1": 0.9975457787513733,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.22.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2941751,
+   "numel": 3670016,
+   "rel_fro_change": 0.02903100661933422,
+   "edited_bf16_sha256": "34f712a2cc698ff0d19190fe6417f9dd5b795743989ec45ec8c55054dc132dad",
+   "changed_rows": 1024,
+   "changed_columns": 3584,
+   "delta_top_singular_values": [
+    0.50817,
+    0.00356,
+    0.00254,
+    0.00242,
+    0.00235
+   ],
+   "delta_energy_in_top1": 0.997048020362854,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.23.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2992887,
+   "numel": 3670016,
+   "rel_fro_change": 0.0327836312353611,
+   "edited_bf16_sha256": "63243880e1bb7ce3c7f5b98daeee73dad112f163394bdbfe5f50c9fecea976a0",
+   "changed_rows": 1024,
+   "changed_columns": 3584,
+   "delta_top_singular_values": [
+    0.53789,
+    0.00313,
+    0.00232,
+    0.00222,
+    0.00216
+   ],
+   "delta_energy_in_top1": 0.9976745247840881,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.23.self_attn.o_proj.weight",
+   "shape": [
+    1024,
+    2048
+   ],
+   "changed_entries": 1698861,
+   "numel": 2097152,
+   "rel_fro_change": 0.030035346746444702,
+   "edited_bf16_sha256": "5e8bf0bb05dd209a81cfc29167d36a9a40484fe318c41a403b428f9a0a570fbc",
+   "changed_rows": 1024,
+   "changed_columns": 2048,
+   "delta_top_singular_values": [
+    0.60197,
+    0.00408,
+    0.00297,
+    0.00288,
+    0.00282
+   ],
+   "delta_energy_in_top1": 0.9972547888755798,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  }
+ ],
+ "changed_tensors": 18,
+ "changed_entries_total": 41702575
+}

@@ -1,0 +1,59 @@
+{
+ "init": {
+  "model": "claude-opus-5-5",
+  "tools": [
+   "Task",
+   "Bash",
+   "CronCreate",
+   "CronDelete",
+   "CronList",
+   "DesignSync",
+   "Edit",
+   "EnterWorktree",
+   "ExitWorktree",
+   "ListAgents",
+   "Monitor",
+   "NotebookEdit",
+   "PushNotification",
+   "Read",
+   "RemoteTrigger",
+   "ReportFindings",
+   "ScheduleWakeup",
+   "SendMessage",
+   "Skill",
+   "TaskStop",
+   "ToolSearch",
+   "Write"
+  ],
+  "mcp_servers": []
+ },
+ "result": {
+  "duration_ms": 350423,
+  "num_turns": 5,
+  "total_cost_usd": 0.187663,
+  "is_error": false,
+  "subtype": "success"
+ },
+ "tool_calls": 4,
+ "tools_used": {
+  "Bash": 4
+ },
+ "flags": {
+  "network": [],
+  "paper_artifacts": [],
+  "training": [],
+  "model_loading": [],
+  "paths_outside_allowed": []
+ },
+ "budget": {
+  "budget": 10,
+  "used": 1,
+  "passes": [
+   {
+    "k": 1,
+    "kind": "generate",
+    "time": "09:05:50"
+   }
+  ]
+ }
+}

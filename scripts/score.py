@@ -26,7 +26,7 @@ def wilson(k, n, z=1.96):
 
 def read_rows(pattern):
     rows = []
-    for p in sorted(glob.glob(pattern)):
+    for p in sorted(glob.glob(pattern + ".jsonl") + glob.glob(pattern + ".jsonl.gz")):
         op = gzip.open if p.endswith(".gz") else open
         with op(p, "rt") as f:
             rows += [json.loads(l) for l in f if l.strip()]
@@ -54,8 +54,8 @@ def main():
     ap.add_argument("--regrade", action="store_true", help="re-grade every response with math-verify")
     ap.add_argument("--out", default=os.path.join(ROOT, "runs", "summary.json"))
     a = ap.parse_args()
-    rows = read_rows(os.path.join(ROOT, "runs", "part1", "*.jsonl*")) + \
-        read_rows(os.path.join(ROOT, "runs", "agent_eval", "*.jsonl*"))
+    rows = read_rows(os.path.join(ROOT, "runs", "part1", "*")) + \
+        read_rows(os.path.join(ROOT, "runs", "agent_eval", "*"))
     rows = [r for r in rows if "response" in r]
     if a.regrade:
         sys.path.insert(0, HERE)

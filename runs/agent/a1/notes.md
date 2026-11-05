@@ -1,0 +1,3 @@
+- pass1: original math n32: 100% cut @1024. Verbose, many Wait loops.
+- pass2: read; Wait direction AUC ~0.9 at L17-22, diffuse over MLP neurons.
+- pass3: alpha0.7 L15-23 proj-out: Wait 36->28. pass4 alpha1.0 gsm8k: Wait 41->20, Actually 16->0, gold seen 8->11. All cut on both. Final = alpha 1.0.

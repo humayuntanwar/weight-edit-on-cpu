@@ -1,0 +1,206 @@
+{
+ "unedited": {
+  "problems": 200,
+  "full_32768": {
+   "correct": 15,
+   "agree_with_author_grades": 200
+  },
+  "cap_1024": {
+   "n": 200,
+   "correct": 0,
+   "accuracy": 0.0,
+   "acc_ci95": [
+    0.0,
+    0.018846005918320894
+   ],
+   "hit_cap": 200,
+   "hit_cap_share": 1.0
+  },
+  "cap_4096": {
+   "n": 200,
+   "correct": 7,
+   "accuracy": 0.035,
+   "acc_ci95": [
+    0.017055324637357105,
+    0.07047146086668134
+   ],
+   "hit_cap": 196,
+   "hit_cap_share": 0.98
+  },
+  "cap_8192": {
+   "n": 200,
+   "correct": 13,
+   "accuracy": 0.065,
+   "acc_ci95": [
+    0.03837598764975976,
+    0.10802003749917945
+   ],
+   "hit_cap": 189,
+   "hit_cap_share": 0.945
+  },
+  "cap_32768": {
+   "n": 200,
+   "correct": 15,
+   "accuracy": 0.075,
+   "acc_ci95": [
+    0.045974507057252416,
+    0.12004459797332034
+   ],
+   "hit_cap": 171,
+   "hit_cap_share": 0.855
+  }
+ },
+ "p10c": {
+  "problems": 200,
+  "full_32768": {
+   "correct": 33,
+   "agree_with_author_grades": 200
+  },
+  "cap_1024": {
+   "n": 200,
+   "correct": 0,
+   "accuracy": 0.0,
+   "acc_ci95": [
+    0.0,
+    0.018846005918320894
+   ],
+   "hit_cap": 200,
+   "hit_cap_share": 1.0
+  },
+  "cap_4096": {
+   "n": 200,
+   "correct": 5,
+   "accuracy": 0.025,
+   "acc_ci95": [
+    0.010724561470787711,
+    0.05717914415161715
+   ],
+   "hit_cap": 196,
+   "hit_cap_share": 0.98
+  },
+  "cap_8192": {
+   "n": 200,
+   "correct": 11,
+   "accuracy": 0.055,
+   "acc_ci95": [
+    0.030985020801370097,
+    0.0957879244659355
+   ],
+   "hit_cap": 191,
+   "hit_cap_share": 0.955
+  },
+  "cap_32768": {
+   "n": 200,
+   "correct": 33,
+   "accuracy": 0.165,
+   "acc_ci95": [
+    0.11996784122663977,
+    0.22265898273863527
+   ],
+   "hit_cap": 152,
+   "hit_cap_share": 0.76
+  }
+ },
+ "p25c": {
+  "problems": 200,
+  "full_32768": {
+   "correct": 26,
+   "agree_with_author_grades": 200
+  },
+  "cap_1024": {
+   "n": 200,
+   "correct": 0,
+   "accuracy": 0.0,
+   "acc_ci95": [
+    0.0,
+    0.018846005918320894
+   ],
+   "hit_cap": 200,
+   "hit_cap_share": 1.0
+  },
+  "cap_4096": {
+   "n": 200,
+   "correct": 7,
+   "accuracy": 0.035,
+   "acc_ci95": [
+    0.017055324637357105,
+    0.07047146086668134
+   ],
+   "hit_cap": 197,
+   "hit_cap_share": 0.985
+  },
+  "cap_8192": {
+   "n": 200,
+   "correct": 14,
+   "accuracy": 0.07,
+   "acc_ci95": [
+    0.04215178292291873,
+    0.11405578216683726
+   ],
+   "hit_cap": 187,
+   "hit_cap_share": 0.935
+  },
+  "cap_32768": {
+   "n": 200,
+   "correct": 26,
+   "accuracy": 0.13,
+   "acc_ci95": [
+    0.09028141365225628,
+    0.18366463072730121
+   ],
+   "hit_cap": 161,
+   "hit_cap_share": 0.805
+  }
+ },
+ "p50c": {
+  "problems": 200,
+  "full_32768": {
+   "correct": 92,
+   "agree_with_author_grades": 200
+  },
+  "cap_1024": {
+   "n": 200,
+   "correct": 2,
+   "accuracy": 0.01,
+   "acc_ci95": [
+    0.0027466006037749346,
+    0.03572248519617954
+   ],
+   "hit_cap": 200,
+   "hit_cap_share": 1.0
+  },
+  "cap_4096": {
+   "n": 200,
+   "correct": 16,
+   "accuracy": 0.08,
+   "acc_ci95": [
+    0.04984015517626642,
+    0.12599048979512317
+   ],
+   "hit_cap": 184,
+   "hit_cap_share": 0.92
+  },
+  "cap_8192": {
+   "n": 200,
+   "correct": 29,
+   "accuracy": 0.145,
+   "acc_ci95": [
+    0.1028928513530641,
+    0.20048781284894374
+   ],
+   "hit_cap": 171,
+   "hit_cap_share": 0.855
+  },
+  "cap_32768": {
+   "n": 200,
+   "correct": 92,
+   "accuracy": 0.46,
+   "acc_ci95": [
+    0.39232931140961247,
+    0.5291783690638533
+   ],
+   "hit_cap": 62,
+   "hit_cap_share": 0.31
+  }
+ }
+}

@@ -9,7 +9,8 @@ class Server:
         self.port, self.url = port, f"http://127.0.0.1:{port}"
         cmd = [f"{LLAMA_DIR}/llama-server", "-m", model, "-np", str(n_parallel), "-c", str(n_parallel * ctx_per_slot),
                "-t", str(threads), "--port", str(port), "--host", "127.0.0.1", "--no-webui", "-b", "2048",
-               "-ub", "512", "--cache-reuse", "0", "--metrics"]
+               "-ub", "512", "--cache-reuse", "0", "--metrics",
+               "--cache-ram", "0", "--ctx-checkpoints", "0"]  # keep RAM bounded (an 8 GB prompt cache got the server OOM-killed)
         self.logf = open(log or os.devnull, "a")
         self.proc = subprocess.Popen(cmd, stdout=self.logf, stderr=subprocess.STDOUT)
         for _ in range(600):

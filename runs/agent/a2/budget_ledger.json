@@ -1,0 +1,11 @@
+{
+ "budget": 10,
+ "used": 1,
+ "passes": [
+  {
+   "k": 1,
+   "kind": "generate",
+   "time": "09:05:50"
+  }
+ ]
+}
