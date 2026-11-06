@@ -1,0 +1,94 @@
+{
+ "tensors": [
+  {
+   "name": "model.language_model.layers.17.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2555324,
+   "numel": 3670016,
+   "rel_fro_change": 0.01365650910884142,
+   "edited_bf16_sha256": "b6a2e42da4dcab123fa2a635dc6ec292b307233a15400b323b5c8ed3bd67b9e7",
+   "changed_rows": 1024,
+   "changed_columns": 3584,
+   "delta_top_singular_values": [
+    0.22254,
+    0.00404,
+    0.00246,
+    0.00243,
+    0.0023
+   ],
+   "delta_energy_in_top1": 0.9880473613739014,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.18.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2554938,
+   "numel": 3670016,
+   "rel_fro_change": 0.014399513602256775,
+   "edited_bf16_sha256": "43ecd9d4794b40f23e162e9e06c6dcffdfacf8d43020cd1e9f6288a75042a327",
+   "changed_rows": 1024,
+   "changed_columns": 3584,
+   "delta_top_singular_values": [
+    0.23544,
+    0.00406,
+    0.00247,
+    0.00244,
+    0.00231
+   ],
+   "delta_energy_in_top1": 0.9892300963401794,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.19.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2522175,
+   "numel": 3670016,
+   "rel_fro_change": 0.013664964586496353,
+   "edited_bf16_sha256": "223e4908a97ba732124a47006bba8d43bf2daa4f53ec28a495d5b75289c8fe83",
+   "changed_rows": 1024,
+   "changed_columns": 3584,
+   "delta_top_singular_values": [
+    0.23448,
+    0.00419,
+    0.0026,
+    0.00256,
+    0.00246
+   ],
+   "delta_energy_in_top1": 0.9881237745285034,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  },
+  {
+   "name": "model.language_model.layers.20.mlp.down_proj.weight",
+   "shape": [
+    1024,
+    3584
+   ],
+   "changed_entries": 2507617,
+   "numel": 3670016,
+   "rel_fro_change": 0.013154745101928711,
+   "edited_bf16_sha256": "b5254a0aec8385b06ca70f21e4a8dd53544802302a2ad804f341634659aa2e78",
+   "changed_rows": 1024,
+   "changed_columns": 3582,
+   "delta_top_singular_values": [
+    0.22891,
+    0.00433,
+    0.00262,
+    0.00258,
+    0.00245
+   ],
+   "delta_energy_in_top1": 0.9872215390205383,
+   "stored": "rank-8 factors of the delta (approximate, not bit exact)"
+  }
+ ],
+ "changed_tensors": 4,
+ "changed_entries_total": 10140054
+}
