@@ -5,7 +5,8 @@ Reads runs/part1/*.jsonl[.gz] and runs/agent_eval/*.jsonl[.gz] (one row per gene
 Intervals: Wilson 95% for shares over generations; for paired edited-minus-base differences a 95% bootstrap over
 problems (both samples of a problem stay together), 5,000 resamples, seed 0.
 Grader: math-verify on the last \\boxed{} (see scripts/mathgrade.py); `correct` is stored in each row and re-checked
-here with --regrade.
+here by default (the field written during generation came from worker threads, where math-verify's signal timeouts
+failed and some correct answers were stored as wrong; see README).
 """
 import argparse, glob, gzip, json, math, os, random, sys
 from collections import defaultdict
@@ -49,15 +50,22 @@ def boot_diff(a, b, seed=0, B=5000):
     return md, bs[int(0.025 * B)], bs[int(0.975 * B) - 1]
 
 
+def _group(rows):
+    g = defaultdict(list)
+    for r in rows:
+        g[(r["cond"], r["cap"], r["model"])].append(r)
+    return g
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--regrade", action="store_true", help="re-grade every response with math-verify")
+    ap.add_argument("--no-regrade", action="store_true", help="trust the `correct` field stored at generation time")
     ap.add_argument("--out", default=os.path.join(ROOT, "runs", "summary.json"))
     a = ap.parse_args()
     rows = read_rows(os.path.join(ROOT, "runs", "part1", "*")) + \
         read_rows(os.path.join(ROOT, "runs", "agent_eval", "*"))
     rows = [r for r in rows if "response" in r]
-    if a.regrade:
+    if not a.no_regrade:   # default: grade every stored response again, in the main thread
         sys.path.insert(0, HERE)
         from mathgrade import grade
         changed = 0
@@ -66,6 +74,10 @@ def main():
             changed += g["correct"] != r["correct"]
             r["correct"] = g["correct"]
         print(f"regraded {len(rows)} rows, {changed} changed", file=sys.stderr)
+    # Main table: sample 0 only, so every model is measured on the same 60 (problem, seed) pairs. The base model's
+    # 8 extra sample-1 rows (condition A, from a stopped 2-sample run) are reported separately.
+    extra = [r for r in rows if r["sample"] > 0]
+    rows = [r for r in rows if r["sample"] == 0]
     groups = defaultdict(list)
     for r in rows:
         groups[(r["cond"], r["cap"], r["model"])].append(r)
@@ -107,6 +119,9 @@ def main():
             "wrong_to_right": sum(1 for c in common if mine[c] > base[c]),
             "right_to_wrong": sum(1 for c in common if mine[c] < base[c]),
             "base_hit_cap": sum(bc[c] for c in common) / len(common), "model_hit_cap": sum(mc[c] for c in common) / len(common)})
+    out["extra_samples"] = [{"cond": c, "cap": t, "model": m, "generations": len(rr), "correct": sum(r["correct"] for r in rr),
+                             "hit_cap": sum(r["hit_cap"] for r in rr)}
+                            for (c, t, m), rr in sorted(_group(extra).items())]
     with open(a.out, "w") as f:
         json.dump(out, f, indent=1)
     print("| cond | cap | model | n (problems x samples) | accuracy [95% CI] | hit cap [95% CI] | mean tokens | acc. among finished |")
@@ -124,6 +139,9 @@ def main():
         print(f"| {p['cond']} | {p['cap']} | {p['model']} | {p['pairs']} | {100*p['base_acc']:.1f}% | {100*p['model_acc']:.1f}% | "
               f"{100*p['diff']:+.1f} pts [{100*p['diff_ci95_bootstrap'][0]:+.1f}, {100*p['diff_ci95_bootstrap'][1]:+.1f}] | "
               f"{p['wrong_to_right']} | {p['right_to_wrong']} |")
+    for e in out["extra_samples"]:
+        print(f"\nextra (sample >= 1, not in the tables): {e['cond']} cap {e['cap']} {e['model']}: {e['correct']}/{e['generations']} "
+              f"correct, {e['hit_cap']}/{e['generations']} hit the cap")
 
 
 if __name__ == "__main__":

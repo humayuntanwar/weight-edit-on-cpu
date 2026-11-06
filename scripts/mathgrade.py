@@ -7,6 +7,7 @@ Check: math-verify, verify(parse('\\boxed{gold}'), parse('\\boxed{pred}')); a pl
 reported separately as `correct_str` for reference.
 """
 import re
+import threading
 
 INSTRUCTION = "Please reason step by step, and put your final answer within \\boxed{}."
 
@@ -59,8 +60,11 @@ def grade(response, gold):
         from math_verify import parse, verify
         _mv = (parse, verify)
     parse, verify = _mv
+    # math-verify's timeouts use signal.alarm, which only works in the main thread; elsewhere run without them
+    t = 5 if threading.current_thread() is threading.main_thread() else None
     try:
-        ok = bool(verify(parse("\\boxed{" + gold + "}"), parse("\\boxed{" + pred + "}")))
+        ok = bool(verify(parse("\\boxed{" + gold + "}", parsing_timeout=t), parse("\\boxed{" + pred + "}", parsing_timeout=t),
+                         timeout_seconds=t))
     except Exception:
         ok = False
     return {"pred": pred, "correct": ok, "correct_str": _norm(pred) == _norm(gold)}
